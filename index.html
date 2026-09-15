@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="assets\icons\car.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Адаптивный тренажёр ПДД с ИИ</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-top">
+                <h1>Адаптивный тренажёр ПДД</h1>
+                <button id="theme-toggle" class="theme-btn" title="Сменить тему">🌙</button>
+            </div>
+            <p>ИИ подбирает вопросы под ваши слабые места</p>
+            <div class="progress-bar-container">
+                <div class="progress-bar" id="progress-bar"></div>
+            </div>
+            <div class="progress-text" id="progress-text">Прогресс: 0%</div>
+        </header>
+
+        <div class="stats-panel">
+            <div class="stats-header">
+                <h3>📊 Статистика по темам</h3>
+                <button id="reset-stats-btn" class="small-btn">Сбросить</button>
+            </div>
+            <div id="topics-stats"></div>
+        </div>
+
+        <div class="quiz-area" id="quiz-area">
+            <div class="question-header">
+                <span id="question-counter">Вопрос 1</span>
+                <div>
+                    <span id="streak-badge" class="streak-badge" style="display:none;">🔥 0</span>
+                    <span id="topic-badge" class="topic-badge"></span>
+                </div>
+            </div>
+            <div class="timer-bar-container" id="timer-container" style="display:none;">
+                <div class="timer-bar" id="timer-bar"></div>
+                <span class="timer-text" id="timer-text">30с</span>
+            </div>
+            <div id="question-text" class="question-text"></div>
+            <div id="options" class="options"></div>
+            <button id="submit-btn" class="btn-submit">Ответить</button>
+        </div>
+
+        <div id="result-area" class="result-area" style="display:none;">
+            <div class="feedback"></div>
+            <button id="next-btn" class="btn-next">Следующий вопрос →</button>
+        </div>
+
+        <div id="final-area" style="display:none;">
+            <div class="final-message">
+                <h2>🎉 Тренировка завершена!</h2>
+                <div id="final-advice" class="advice"></div>
+                <div class="final-buttons">
+                    <button id="export-btn" class="btn-export">💾 Сохранить отчёт</button>
+                    <button id="restart-btn" class="btn-restart">Пройти заново</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
